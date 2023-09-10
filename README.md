@@ -1,6 +1,6 @@
-#Beautyness
+# Beautyness
 
-##Description
+## Description
 
 **This web application has been made for barber shop who was interested about promotion its services and make business more available compare to pass years**
 
