@@ -1,0 +1,70 @@
+.burger {
+	z-index: 2;
+	display: none;
+	cursor: pointer;
+
+	@include breakpoint {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2.4rem;
+		height: 2.4rem;
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 0.5rem;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+
+		&__item--active {
+			gap: 0;
+
+			&::before,
+			&::after {
+				width: resize(12.75, 9);
+			}
+
+			&::before {
+				transform: rotate(45deg);
+				position: relative;
+				top: .1rem;
+				left: 0;
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+				position: relative;
+				bottom: 0;
+				left: 0;
+			}
+		}
+
+		&__second-line,
+		&__item::before,
+		&__item::after {
+			content: "";
+			display: inline-block;
+			width: resize(12.75, 9);
+			height: .1rem;
+			background-color: #fff;
+			transition: all .4s ease-in-out;
+		}
+
+		;
+
+		// according to the design
+		// you can comment it if you do not need
+		&__second-line--larger {
+			width: resize(18, 15);
+		}
+
+		&__second-line--active {
+			transform: scale(0);
+		}
+	}
+}

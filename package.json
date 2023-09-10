@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-	"dev": "npx gulp"
+    "dev": "npx gulp"
   },
   "author": "polarbear",
   "license": "ISC",
@@ -36,5 +36,8 @@
     "swiper": "^10.2.0",
     "webp-converter": "^2.2.3",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "prettier": "^3.0.2"
   }
 }
