@@ -13,3 +13,27 @@
 		display: block;
 	}
 }
+
+._icon-book_open:before {
+	content: "\e900";
+}
+
+._icon-edit:before {
+	content: "\e901";
+}
+
+._icon-mail:before {
+	content: "\e903";
+}
+
+._icon-phone:before {
+	content: "\e904";
+}
+
+._icon-star:before {
+	content: "\e905";
+}
+
+._icon-user:before {
+	content: "\e906";
+}
