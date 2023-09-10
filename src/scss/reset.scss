@@ -1,6 +1,3 @@
-@import "./size";
-@import "./font_properties";
-
 *, *::before, *::after{
 	margin: 0;
 	padding: 0;
@@ -56,7 +53,7 @@ body{
 	grid-auto-rows: $default-header-height $default-main-height $default-footer-height;
 }
 
-._container{
+[class="__container"]{
 	width: $base-container-width;
 	margin: 0 auto;
 }

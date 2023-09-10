@@ -1,5 +1,5 @@
 // color
-@import "color";
+@import "./base_color";
 @import "./color/header_color";
 @import "./color/main_color";
 @import "./color/button_color";
@@ -37,9 +37,6 @@
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/footer";
-@import "./layout/registration";
-@import "./layout/detail";
-
 // features
 @import "./features/login/login";
 @import "./features/logout/logout";
