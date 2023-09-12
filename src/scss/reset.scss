@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800");
+
 *, *::before, *::after{
 	margin: 0;
 	padding: 0;
@@ -41,7 +43,7 @@ html{
 
 body{
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	overflow-x: hidden;
 }
 
@@ -53,8 +55,111 @@ body{
 	grid-auto-rows: $default-header-height $default-main-height $default-footer-height;
 }
 
-[class="__container"]{
-	width: $base-container-width;
+[class$="__container"]{
+	max-width: getWidthOfContainer("base-container");
 	margin: 0 auto;
+	padding: 0 1rem;
 }
 
+//-------------------------------------------------------------------
+
+.social-list {
+	flex: 0 1 max-content;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	gap: resize(30, 18);
+
+	@include breakpoint("laptop", 315) {
+		gap: resize(18, 14);
+	}
+}
+
+.social {
+
+	&__item {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10%;
+		position: relative;
+		cursor: pointer;
+	}
+	
+	&__item::before{
+		transition: all 300ms ease;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		content: "";
+		display: block;
+		width: 0;
+		height: 100%;
+		background-color: #0000003f;
+		border-radius: .5rem;
+	}
+
+	&__item:hover::before{
+		width: 100%;
+	}
+
+
+	&__link{
+	}
+
+	&__img{}
+}
+
+
+//-------------------------------------------------------------------
+
+.logo-box {}
+
+.logo {}
+
+.title {}
+
+//-------------------------------------------------------------------
+
+.contact-link{
+	color: #141414;
+	font-family: $default-font-family;
+	font-size: resize(18, 14);
+	font-style: normal;
+	font-weight: 600;
+	line-height: 125%;
+	letter-spacing: -0.18rem;
+
+	@include breakpoint("laptop", 315) {
+		font-size: resize(14, 12);
+	}
+}
+
+//-------------------------------------------------------------------
+
+.list{
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(5, max-content);
+	gap: resize(30, 18);
+	@include breakpoint("laptop", 315) {
+		gap: resize(18, 14);
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+}
+
+.list__item {
+	color: #555;
+	font-family: $default-font-family;
+	font-size: resize(18, 12);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+	@include breakpoint("laptop", 315){
+		font-size: 1.2rem;
+	}
+}

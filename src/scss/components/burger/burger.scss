@@ -3,7 +3,7 @@
 	display: none;
 	cursor: pointer;
 
-	@include breakpoint {
+	@include breakpoint("laptop", 315) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -51,7 +51,7 @@
 			display: inline-block;
 			width: resize(12.75, 9);
 			height: .1rem;
-			background-color: #fff;
+			background-color: #000;
 			transition: all .4s ease-in-out;
 		}
 

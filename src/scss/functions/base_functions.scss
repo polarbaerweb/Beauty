@@ -10,6 +10,7 @@ $area: (
 
 $container-width: (
 	"base-container": $base-container-width,
+	"inner-container": $inner-container
 );
 
 
@@ -20,12 +21,12 @@ $container-width: (
 
 @function resize($from, $to) {
 	$converted-to-rem: $to * 0.1rem;
-	@return calc($converted-to-rem + ($from - $to) * ((100vw - 320px) / ($base-container-width - 320)))
+	@return calc($converted-to-rem + ($from - $to) * ((100dvw - 32rem) / (($base-container-width * 10) - 320)))
 };
 
 @function getWidthOfContainer($container-name){
-	$selected-container: map-get($container-width, $container-name);
-	$half-width: (math.div($selected-container, $size-of-the-screen) * 100) * 1%;
+	$selected-container: map-get($container-width, $container-name) * 10;
+	$half-width: (math.div($selected-container, ($size-of-the-screen * 10)) * 100) * 1%;
 	@return $half-width;
 };
 
@@ -34,5 +35,5 @@ $container-width: (
 }
 
 @function getWidthOfTheIImage($width){
-	@return math.div(($width * 0.1), ($discover-digital-container * 0.1)) * 70dvw;
+	@return math.div(($width * 0.1), (($inner-container * 10) * 0.1)) * 70dvw;
 }
