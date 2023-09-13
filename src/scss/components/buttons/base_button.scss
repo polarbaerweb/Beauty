@@ -5,6 +5,7 @@
 	color: #000;
 	width: max-content;
 	height: 5rem;
+	cursor: pointer;
 }
 
 .button-flexed {
@@ -13,4 +14,8 @@
 	gap: 1.2rem;
 	height: 100%;
 	font-size: 1.4rem;
+
+	@include breakpoint("laptop", 315){
+		font-size: 1rem;
+	}
 }

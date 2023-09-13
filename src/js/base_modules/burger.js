@@ -22,8 +22,10 @@ header.addEventListener( "click", ( event ) =>
 
 
 document.documentElement.addEventListener( "click", (event) =>
-{
-	if ( event.target !== burger_item && event.target !== burger && !event.target in header_navigation.children && event.target !== header_navigation)
+{	
+	console.log(event.target)
+
+	if ( event.target !== burger_item && event.target !== burger && event.target === document.body && event.target !== header_navigation)
 	{	
 		header_navigation.classList.remove("header__navigation--active")
 		burger_item.classList.remove("burger__item--active")
