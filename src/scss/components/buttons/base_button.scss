@@ -13,9 +13,30 @@
 	align-items: center;
 	gap: 1.2rem;
 	height: 100%;
-	font-size: 1.4rem;
+	font-size: 1rem;
+	color: #fff;
+	text-transform: uppercase;
 
 	@include breakpoint("laptop", 315){
 		font-size: 1rem;
+	}
+}
+
+.button {
+	background-color: #5c757c;
+	padding: 1.6rem 3.3rem;
+	text-transform: capitalize;
+	width: 20rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint("laptop") {
+		background-color: #9bc7d379;
+	}
+
+	@include breakpoint("mobile_L", 108) {
+		width: 100%;
+		padding: 0.8rem 1.65rem;
 	}
 }

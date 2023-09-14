@@ -1,19 +1,22 @@
 .header {
-	background-color: #9bc7d379;
-	height: 12.6rem !important;
+	background-color: #7A9CA5;
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 12.6rem;
 	width: 100%;
-
+	z-index: 10;
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: getWidthOfContainer("base-container");
 		gap: resize(30, 18);
-		height: 100%;
+		height: 12.6rem;
+		margin: 0 auto;
+
+		@include breakpoint("laptop", 277){
+			height: 8rem;
+		}
 	}
 
 	&__major-information {
@@ -59,7 +62,7 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			width: 50dvw;
+			width: 50%;
 			background-color: #7A9CA5;
 			padding: 4rem 3rem;
 			overflow-y: scroll;
@@ -119,7 +122,7 @@
 		top: 0;
 		left: 0;
 		@include breakpoint("laptop"){
-			width: 100%;
+			width: inherit;
 			height: max-content;
 			display: flex;
 			flex-direction: column;
@@ -174,6 +177,7 @@
 	}
 	
 	&__sub-menu {
+		pointer-events: none;
 		visibility: hidden;
 		opacity: 0;
 		position: absolute;
@@ -188,17 +192,19 @@
 		background-color: #9bc7d379;
 
 		@include breakpoint("laptop", 315){
-			width: 70%;
+			width: 15rem;
 			top: 0;
 			left: 0;
 			padding: 1rem 0;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			background-color: transparent;
 		}
 	}
 
 	&__sub-container:hover &__sub-menu{
+		pointer-events: all;
 		transition: all 400ms ease;
 		opacity: 1;
 		visibility: visible;
@@ -233,23 +239,4 @@
 	}
 
 	&__sub-link {}
-
-	&__button {
-		background-color: #7A9CA5;
-		padding: 1.6rem 3.3rem;
-		text-transform: capitalize;
-		width: 20rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		@include breakpoint("laptop"){
-			background-color: #9bc7d379;
-		}
-
-		@include breakpoint("mobile_L", 108){
-			width: 100%;
-			padding: 0.8rem 1.65rem;
-		}
-	}
 }

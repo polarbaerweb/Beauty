@@ -1,0 +1,168 @@
+.main {
+	&__bg-container {
+		width: 100% !important;
+		height: 100dvh;
+		position: relative;
+		top: 12.6rem;
+		left: 0;
+		z-index: 1;
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 0;
+
+		@include breakpoint("laptop", 277){
+			top: 8rem;
+		}
+	}
+
+	&__bg-img {
+		flex: 0 1 50%;
+		height: 100%;
+	}
+
+	&__bg-color--full-screen {
+		background-color: #EBF3F5;
+		flex: 1 1 50%;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: resize(55, 40);
+		width: getWidthOfContainer("main-first-screen");
+		height: 90dvh;
+
+		@include breakpoint("laptop", 277){
+			justify-content: center;
+			gap: 0;
+		}
+	}
+
+	&__container--absolute{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 3;
+		
+	}
+
+	&__left-block {
+		flex: 0 1 61rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+
+		@include breakpoint("laptop", 277){
+			flex: 0 1 80%;
+			background-color: #fff;
+			padding: 1.5rem 3rem;
+		}
+
+		@include breakpoint("mobile_L", 292){
+			flex: 1 1 auto;
+			background-color: transparent;
+			padding: 0;
+		}
+	}
+
+	&__icon-box {
+		display: flex;
+		align-items: center;
+		gap: 2.2rem;
+	}
+
+	&__icon {}
+
+	&__icon-title {
+		color: #5C8692;
+		font-family: $default-font-family;
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 154.5%;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		color: #141414;
+		font-family: $default-font-family;
+		font-size: 4.5rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 115%;
+		letter-spacing: -0.7px;
+	}
+
+	&__title--larger {
+		font-size: 7rem;
+	}
+
+	&__description {
+		color: #555;
+		font-family: Manrope;
+		font-size: 1.9rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 170%;
+		
+		@include breakpoint("mobile_L", 292){
+			color: #fff;
+			font-weight: 700;
+			word-spacing: .5rem;
+		}
+	}
+
+
+	.main  &__description{
+		width: 48rem !important;
+	}
+
+	&__button {
+		background-color: #5C8692;
+		@include breakpoint("mobile_L", 292){
+			width: 50rem;
+			background-color: #7d9aa3;
+		}
+	}
+
+
+	&__right-block {
+		padding: 2rem;
+		flex: 0 1 60rem;
+		height: 60rem;
+		border: 1rem solid #ebf3f5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-left: none;
+
+		@include breakpoint("laptop", 277){
+			display: none;
+		}
+	}
+	
+	&__image-box{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transform: translate(-10%, 0);
+	}
+	
+	&__image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 65rem;
+		height: 55rem;
+		box-shadow: -1.4rem 0 2rem #bcc7ca;
+		transform: translate(-50%, -50%);
+	}
+}
