@@ -6,9 +6,7 @@
 	width: 100%;
 	z-index: 10;
 	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include flex-base;
 		width: getWidthOfContainer("base-container");
 		gap: resize(30, 18);
 		height: 12.6rem;
@@ -20,14 +18,12 @@
 	}
 
 	&__major-information {
-		display: flex;
-		align-items: center;
+		@include flex-align-center;
 		gap: resize(46, 26);
 	}
 
 	&__logo-box {
-		display: flex;
-		align-items: center;
+		@include flex-align-center;
 		gap: 1.2rem;
 	}
 
@@ -47,8 +43,7 @@
 	}
 
 	&__navigation {
-		display: flex;
-		align-items: center;
+		@include flex-align-center;
 		gap: resize(32, 22);
 
 		@include breakpoint("laptop", 315){
@@ -133,14 +128,12 @@
 
 	
 	&__link-arrow{
-		display: flex;
-		align-items: center;
+		@include flex-align-center;
 		gap: .8rem;
 		
 		
 		span{
-			display: flex;
-			align-items: center;
+			@include flex-align-center;
 		}
 		span::before,
 		span::after{
@@ -161,18 +154,20 @@
 			top: 0;
 			left: -4px;
 		}
-	}
 
-	&__link-arrow:hover{
-		span::before {
-			transform: rotate(140deg);
-		};
-		
-		span::after {
-			transform: rotate(220deg);
-			position: relative;
-			top: 0;
-			left: -4px;
+		&:hover {
+			span::before {
+				transform: rotate(140deg);
+			}
+
+			;
+
+			span::after {
+				transform: rotate(220deg);
+				position: relative;
+				top: 0;
+				left: -4px;
+			}
 		}
 	}
 	
@@ -189,16 +184,14 @@
 		overflow-y: scroll;
 		overflow-x: hidden;
 		z-index: 10;
-		background-color: #9bc7d379;
+		background-color: #166c84b2;
 
 		@include breakpoint("laptop", 315){
 			width: 15rem;
 			top: 0;
 			left: 0;
 			padding: 1rem 0;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+			@include flex-column-align-start;
 			background-color: transparent;
 		}
 	}
@@ -220,8 +213,7 @@
 	}
 
 	&__sub-list {
-		display: flex;
-		flex-direction: column;
+		@include flex-column;
 		gap: 2rem;
 	}
 
@@ -230,7 +222,7 @@
 		font-family: $default-font-family;
 		font-size: resize(18, 12);
 		font-style: normal;
-		font-weight: 400;
+		font-weight: 800;
 		line-height: 125%;
 	
 		@include breakpoint("laptop", 315) {

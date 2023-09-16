@@ -11,7 +11,7 @@ $area: (
 $container-width: (
 	"base-container": $base-container-width,
 	"inner-container": $inner-container,
-	"main-first-screen": $container-main-first-screen
+	"main-container": $main-container
 );
 
 
@@ -32,9 +32,9 @@ $container-width: (
 };
 
 @function getHeightOfTheImage($height, $max-height){
-	@return math.div(($height * 0.1), ($max-height * 0.1)) * 70dvh;
+	@return math.div(($height * 0.1), ($max-height * 0.1)) * 100dvh;
 }
 
 @function getWidthOfTheIImage($width){
-	@return math.div(($width * 0.1), (($inner-container * 10) * 0.1)) * 70dvw;
+	@return math.div(($width * 0.1), (($inner-container * 10) * 0.1)) * 100dvw;
 }

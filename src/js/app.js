@@ -14,6 +14,7 @@ import * as login from "./authentication/login/login.js";
 import * as logout from "./authentication/logout/logout.js";
 import * as signup from "./authentication/signup/signup.js";
 import * as reset_password from "./authentication/reset_password/reset_password.js";
-// import * as scrollbar from "./scrollbar_handler/scrollbar_handler.js"
+// import * as scrollbar from "./scrollbar_handler/scrollbar_handler.js";
+import * as track_viewport_resizing from "./base_modules/background_modification/track_viewport_resizing.js";
 
 webp.handleWebpSupporter()

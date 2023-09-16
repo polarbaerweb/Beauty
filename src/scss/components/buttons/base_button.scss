@@ -8,20 +8,6 @@
 	cursor: pointer;
 }
 
-.button-flexed {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-	height: 100%;
-	font-size: 1rem;
-	color: #fff;
-	text-transform: uppercase;
-
-	@include breakpoint("laptop", 315){
-		font-size: 1rem;
-	}
-}
-
 .button {
 	background-color: #5c757c;
 	padding: 1.6rem 3.3rem;
@@ -39,4 +25,25 @@
 		width: 100%;
 		padding: 0.8rem 1.65rem;
 	}
+}
+
+
+.button-flexed {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	height: 100%;
+	font-size: 1rem;
+	color: #fff;
+	text-transform: uppercase;
+
+	@include breakpoint("laptop", 315){
+		font-size: 1rem;
+	}
+}
+
+
+.button-outlined{
+	background-color: transparent;
+	border: .2rem solid #5c757c;
 }
