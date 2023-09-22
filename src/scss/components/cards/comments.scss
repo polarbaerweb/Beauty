@@ -1,0 +1,80 @@
+.main {
+	&__comments{
+		background-color: #EDF5F7;
+		width: 100%;
+	}
+
+	&__comments-container{
+	}
+
+	&__comment,
+	&__comment.swiper-slide{
+		@include flex-column;
+		max-width: 100%;
+		width: 100%;
+		min-height: 30rem;
+		height: calc(getHeightOfTheImage(125, 300) + 8rem);
+	}
+
+	&__comment-text {
+		flex: 1 1 auto;
+		text-align: left;
+		padding: resize(44, 33);
+		background-color: #fff;
+		color: #141414;
+		font-size: resize(19, 14);
+		line-height: 180%;
+	}
+
+	&__comment-body {
+		padding: 1rem resize(44, 33);
+		background-color: #1E2C30;
+		max-width: 100%;
+		width: 100%;
+		@include flex-align-center;
+		gap: resize(30, 14);
+	}
+
+	&__comment-left img{
+		border: 2px solid #FFF;
+		flex: 0 1 74px;
+		margin-right: .9rem;
+	}
+
+	&__comment-right {
+		flex: 1 1 16.8rem;
+	}
+
+	&__comment-box {
+		width: 100%
+	}
+
+	&__comment-stars {
+		@include flex-base;
+		justify-content: flex-start;
+		gap: .3rem;
+		
+	}
+
+	&__card-title--lower {
+		font-size: 2rem;
+		color: #fff !important;
+		padding: 0 !important;
+	}
+
+	&__comment-author-name {
+		font-size: 2rem;
+		line-height: 160%;
+	}
+
+	&__comment-author-city {
+		line-height: 160%;
+	}
+
+	&__comment-buttons{
+		height: 5rem;
+		width: 100%;
+		@include flex-base;
+		text-align: center;
+	}
+}

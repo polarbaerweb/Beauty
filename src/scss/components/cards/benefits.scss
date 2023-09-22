@@ -1,0 +1,34 @@
+.main {
+	&__benefits-cards {
+		@include grid-base;
+		grid-template-columns: repeat(3, max(1fr));
+		gap: resize(105, 50);
+
+		@include breakpoint("laptop", 10){
+			grid-template-columns: repeat(2, 50%);
+			gap: resize(50, 40);
+		}
+	}
+
+	&__benefit-card {
+		@include flex-column;
+		gap: resize(20, 10);
+	}
+
+	&__benefit-box {
+		@include flex-column;
+		gap: resize(20, 10);
+	}
+
+	&__benefit-img {
+		width: 9rem;
+		height: 9rem;
+	}
+
+	&__benefit-title {
+		padding: 0 !important;
+		font-weight: 700;
+		color: #141414;
+		font-size: resize(26, 20);
+	}
+}

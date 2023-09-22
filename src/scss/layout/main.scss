@@ -110,6 +110,7 @@
 		font-weight: 700;
 		line-height: 1.4;
 		letter-spacing: -0.7px;
+		text-transform: capitalize;
 	}
 
 	&__title--larger {
@@ -144,7 +145,7 @@
 	&__button {
 		background-color: #5C8692;
 		@include breakpoint("mobile_L", 292){
-			width: 50rem;
+			width: 100%;
 			background-color: #7d9aa3;
 		}
 	}
@@ -189,37 +190,53 @@
 
 
 //------------------------------------------------------------------- About Us
-.about-us {
-	padding-top: 0
-}
+
 
 .main {
+	&__about-us {
+		background-color: #ebf3f5;
+	}
+
+
 	&__about-us-container{
 		@include flex-center;
-		gap: resize(125, 90);
 		@include breakpoint("tablet"){
 			flex-direction: column;
 			align-items: flex-start
 		}
+
+		gap: resize(50, 45);
 	}
 
 	&__about-cards {
+		flex: 0 1 50%;
 		@include grid-base;
 		grid-template-columns: repeat(3, 16.5rem);
 		gap: 1rem;
 
 		@include breakpoint("tablet"){
-			grid-template-columns: repeat(3, 33.333%)
+			width: 100%;
+			grid-template-columns: repeat(2, 49%);
+			justify-content: space-between;
+			gap: 0;
+			row-gap: 3%;
+		}
+
+		@include breakpoint("mobile_L"){
+			width: 100%;
+			grid-template-columns: repeat(1, 100%)
 		}
 	}
 
 	&__about-card {
 		@include flex-column-center;
 		width: 100%;
-		border: 1px solid #1E2C30;
-		background: #FFF;
+		border: 2px solid #1E2C30;
+		border-radius: .6rem;
+		background: transparent;
 		padding: 2.1rem 1.1rem;
 		min-height: 18rem;
+		color: #000 !important;
 	}
 	
 	&__card-box--lower {
@@ -232,15 +249,132 @@
 	}
 
 	&__right-block--background {
-		background-image: url("../../img/major/Background.png") no-repeat;
+		flex: 0 1 50%;
+		background-color: #1E2C30;
+		@include breakpoint("tablet"){
+			display: none;
+		}
 	}
 
 	&__about-img {
-		width: getWidthOfTheIImage(546);
+		width: getWidthOfTheIImage(446);
 		height: getHeightOfTheImage(576, 614);
+		transform: translate(-5%, 5%)
+	}
 
-		@include breakpoint("tablet"){
-			width: 100%;
+	&__card-title--lower{
+		color: #000 !important;
+	}
+}
+
+
+//------------------------------------------------------------------- Category
+
+.main {
+	&__category-container {
+		@include flex-column;
+		@include breakpoint("laptop", 263) {
+			gap: 10rem;
 		}
+	}
+
+	&__category-top,
+	&__top {
+		margin-bottom: 5rem !important;
+
+		@media (min-width: 1439px) {
+			max-width: 65.9rem;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+	&__category-item {
+		@include flex-base;
+		gap: 3rem;
+	}
+
+	&__category-item:nth-child(even){
+		flex-direction: row-reverse;
+		@include  breakpoint("laptop", 263){
+			flex-direction: row;
+		}
+	}
+
+	&__category-left {
+		flex: 0 1 61.5rem;
+		height: max-content;
+		@include breakpoint("laptop", 263) {
+				display: none;
+			}
+	}
+
+	&__category-img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__category-right {
+		flex: 0 1 53rem;
+		@include flex-column;
+		gap: 3.5rem;
+		@include breakpoint("laptop", 263) {
+				flex: 1 1 auto;
+		}
+	}
+
+	&__category-list {
+		width: 100%;
+		@include flex-column;
+		gap: resize(18, 14);
+	}
+
+	&__category-list-item {
+		width: 100%;
+		@include flex-column;
+		gap: 1rem;
+	}
+
+	&__category-box {
+		width: 100%;
+		@include flex-base;
+	}
+
+	&__title--lower {
+		font-size: 2.2rem;
+		flex: 0 1 max-content;
+		@include flex-center;
+	}
+
+	&__title--lower::after{
+		content:"..........................................";
+		display: inline-block;
+		margin-left: 1rem;
+	}
+
+	&__description--black {
+		flex: 0 1 max-content;
+	}
+
+	&__category-price {}
+
+	&__category-description {
+		@include flex-column;
+		gap: 2rem;
+	}
+	&__category-description::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: .1rem;
+		background-color: #9BB7BF;
+	}
+}
+
+
+.button-category {
+	width: 100%;
+	a{
+		font-size: 1.6rem;
 	}
 }

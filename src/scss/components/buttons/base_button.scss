@@ -4,7 +4,6 @@
 	font-weight: 700;
 	color: #000;
 	width: max-content;
-	height: 5rem;
 	cursor: pointer;
 }
 
@@ -12,6 +11,7 @@
 	background-color: #5c757c;
 	padding: 1.6rem 3.3rem;
 	text-transform: capitalize;
+	height: 5rem;
 	width: 20rem;
 	display: flex;
 	align-items: center;
@@ -20,18 +20,15 @@
 	@include breakpoint("laptop") {
 		background-color: #9bc7d379;
 	}
-
-	@include breakpoint("mobile_L", 108) {
-		width: 100%;
-		padding: 0.8rem 1.65rem;
-	}
 }
 
 
 .button-flexed {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 1.2rem;
+	width: 100%;
 	height: 100%;
 	font-size: 1rem;
 	color: #fff;

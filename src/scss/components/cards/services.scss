@@ -6,51 +6,38 @@
 		gap: 2rem;
 
 		@include breakpoint("laptop", 282){
-			grid-template-columns: repeat(2, 50%);
-		}
-
-		@include breakpoint("tablet"){
-			grid-template-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			gap: 4rem
 		}
 	}
 	
 	&__card {
+		@include flex-column-align-start;
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		gap: resize(30, 20);
 		transition: all 500ms ease 0s;
-		transform: translateY(50px);
-	}
-
-	&__card:hover{
-		transform: translateY(0);
-	}
-
-	
-	&__card:hover &__card-body{
-		opacity: 1;
-		visibility: visible;
-		transform: scaleY(1);
+		border-radius: .6rem;
+		@include breakpoint("laptop", 282){
+			background-color: #ebf3f5
+		}
 	}
 
 	&__card-box {
-		@include flex-column-align-start;
+		@include flex-column;
 		width: 100%;
 		gap: resize(30, 20);
 		overflow: hidden;
 	}
 
 	&__card-body{
-		display: none;
-		opacity: 0;
-		visibility: hidden;
 		transition: all 500ms ease 0s;
 		display: flex;
 		flex-direction: column;
 		gap: resize(30, 20);
-		transform: scaleY(0);
+		@include breakpoint("laptop", 282){
+			padding: 0 2rem;
+			padding-bottom: 1.5rem;
+		}
 	}
 	
 	
@@ -58,6 +45,7 @@
 		width: 100%;
 		height: getHeightOfTheImage(250, 489);
 		object-fit: cover;
+		border-radius: .6rem;
 	}
 
 
@@ -69,6 +57,9 @@
 		font-weight: 700;
 		line-height: 120%;
 		text-transform: capitalize;
+		@include breakpoint("laptop", 282){
+			padding: 0 2rem;
+		}
 	}
 
 	

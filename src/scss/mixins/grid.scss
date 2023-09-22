@@ -1,6 +1,6 @@
 @mixin grid-base{
 	display: grid;
 	grid-auto-rows: 1fr;
+	align-content: start;
 	justify-content: space-between;
-	align-items: stretch;
 }

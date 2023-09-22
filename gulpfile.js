@@ -19,6 +19,7 @@ import { handler_js } from './gulp/tasks/js.js';
 import { handle_images, handle_svg_file } from './gulp/tasks/images.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
 import { Icon_ttfToWoff, Icon_fontsStyle } from './gulp/tasks/icon_fonts.js';
+import { vendorCSS, vendorJS } from './gulp/tasks/swiper.js';
 
 function watcher(){
 	gulp.watch(path.watch.files, copy);
@@ -33,8 +34,10 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 const icon_fonts = gulp.series(Icon_ttfToWoff, Icon_fontsStyle)
 
+const swiper = gulp.series(vendorJS, vendorCSS)
+
 const mainTasks = gulp.series(
-	fonts, icon_fonts, gulp.parallel( copy, combine_html, handler_scss, handler_js, handle_images, handle_svg_file )
+	fonts, icon_fonts, swiper, gulp.parallel( copy, combine_html, handler_scss, handler_js, handle_images, handle_svg_file )
 );
 
 const dev = gulp.series(deleteFiles, mainTasks, gulp.parallel(watcher, handle_server));

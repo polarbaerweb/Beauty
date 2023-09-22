@@ -1,0 +1,28 @@
+.swiper {
+	max-width: 120rem;
+	width: 100%;
+}
+
+.swiper-wrapper{
+	@include grid-base;
+	grid-auto-flow: column;
+	grid-auto-columns: 100%;
+}
+
+.prev,
+.next {
+	width: 10rem;
+	height: 4rem;
+	border-radius: .6rem;
+	background-color: #1E2C30;
+	color: #EDF5F7;
+	font-size: 1.8rem;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+	@include flex-center;
+
+	@include breakpoint("tablet"){
+		display: none;
+	}
+}

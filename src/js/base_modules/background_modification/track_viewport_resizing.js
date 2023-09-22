@@ -13,9 +13,9 @@ const image_path = attributes[ 1 ]
 const watch = new change_bg.WatchViewPortResizing(width, image_path, image_block)
 
 
-window.addEventListener( "resize", function ()
-{
-	watch.watchModification(this.window.innerWidth)
-})
+// window.addEventListener( "resize", function ()
+// {
+// 	watch.watchModification(this.window.innerWidth)
+// })
 
 
