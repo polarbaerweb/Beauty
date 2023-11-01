@@ -11,7 +11,7 @@
 		flex-direction: row-reverse;
 		padding: 0;
 
-		@include breakpoint("laptop", 277){
+		@include breakpoint("laptop", 277) {
 			top: 8rem;
 		}
 	}
@@ -22,7 +22,7 @@
 	}
 
 	&__bg-color--full-screen {
-		background-color: #EBF3F5;
+		background-color: #ebf3f5;
 		flex: 1 1 50%;
 		height: 100%;
 		position: relative;
@@ -35,7 +35,7 @@
 		margin: 0 auto;
 	}
 
-	&__container--absolute{
+	&__container--absolute {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -46,8 +46,8 @@
 		align-items: center;
 		gap: resize(55, 40);
 		@include breakpoint("laptop", 277) {
-				justify-content: center;
-				gap: 0;
+			justify-content: center;
+			gap: 0;
 		}
 	}
 
@@ -56,7 +56,7 @@
 		gap: 2.4rem;
 	}
 
-	&__left-block--screen{
+	&__left-block--screen {
 		flex: 0 1 61rem;
 
 		@include breakpoint("laptop", 277) {
@@ -64,7 +64,7 @@
 			background-color: #fff;
 			padding: 1.5rem 3rem;
 		}
-		
+
 		@include breakpoint("mobile_L", 292) {
 			flex: 1 1 auto;
 			background-color: transparent;
@@ -72,13 +72,11 @@
 		}
 	}
 
-
 	&__left-top,
-	&__left-bottom{
+	&__left-bottom {
 		@include flex-column-start;
 		gap: 2.4rem;
 	}
-
 
 	&__icon-box {
 		display: flex;
@@ -92,7 +90,7 @@
 	}
 
 	&__icon-title {
-		color: #5C8692;
+		color: #5c8692;
 		font-family: $default-font-family;
 		font-size: 1.5rem;
 		font-style: normal;
@@ -124,38 +122,34 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 170%;
-		
-		@include breakpoint("mobile_L", 292){
+
+		@include breakpoint("mobile_L", 292) {
 			font-weight: 700;
-			word-spacing: .5rem;
+			word-spacing: 0.5rem;
 		}
 		width: 100%;
 	}
 
-
-	&__first-description{
+	&__first-description {
 		width: 48rem;
 		@include breakpoint("mobile_L", 292) {
 			color: #fff;
 		}
 	}
 
-
-
 	&__button {
-		background-color: #5C8692;
-		@include breakpoint("mobile_L", 292){
+		background-color: #5c8692;
+		@include breakpoint("mobile_L", 292) {
 			width: 100%;
 			background-color: #7d9aa3;
 		}
 	}
-	
 
-	&__right-block{
+	&__right-block {
 		@include flex-center;
 	}
 
-	&__right-block--screen{
+	&__right-block--screen {
 		padding: 2rem;
 		flex: 0 1 60rem;
 		height: 60rem;
@@ -167,8 +161,7 @@
 		}
 	}
 
-
-	&__image-box{
+	&__image-box {
 		width: 100%;
 		height: 100%;
 		position: relative;
@@ -177,7 +170,7 @@
 		width: 100%;
 		transform: translate(-10%, 0);
 	}
-	
+
 	&__image {
 		position: absolute;
 		top: 50%;
@@ -188,21 +181,18 @@
 	}
 }
 
-
 //------------------------------------------------------------------- About Us
-
 
 .main {
 	&__about-us {
 		background-color: #ebf3f5;
 	}
 
-
-	&__about-us-container{
+	&__about-us-container {
 		@include flex-center;
-		@include breakpoint("tablet"){
+		@include breakpoint("tablet") {
 			flex-direction: column;
-			align-items: flex-start
+			align-items: flex-start;
 		}
 
 		gap: resize(50, 45);
@@ -214,7 +204,7 @@
 		grid-template-columns: repeat(3, 16.5rem);
 		gap: 1rem;
 
-		@include breakpoint("tablet"){
+		@include breakpoint("tablet") {
 			width: 100%;
 			grid-template-columns: repeat(2, 49%);
 			justify-content: space-between;
@@ -222,23 +212,23 @@
 			row-gap: 3%;
 		}
 
-		@include breakpoint("mobile_L"){
+		@include breakpoint("mobile_L") {
 			width: 100%;
-			grid-template-columns: repeat(1, 100%)
+			grid-template-columns: repeat(1, 100%);
 		}
 	}
 
 	&__about-card {
 		@include flex-column-center;
 		width: 100%;
-		border: 2px solid #1E2C30;
-		border-radius: .6rem;
+		border: 2px solid #1e2c30;
+		border-radius: 0.6rem;
 		background: transparent;
 		padding: 2.1rem 1.1rem;
 		min-height: 18rem;
 		color: #000 !important;
 	}
-	
+
 	&__card-box--lower {
 		@include flex-column-center;
 		gap: 1.4rem;
@@ -250,8 +240,8 @@
 
 	&__right-block--background {
 		flex: 0 1 50%;
-		background-color: #1E2C30;
-		@include breakpoint("tablet"){
+		background-color: #1e2c30;
+		@include breakpoint("tablet") {
 			display: none;
 		}
 	}
@@ -259,14 +249,13 @@
 	&__about-img {
 		width: getWidthOfTheIImage(446);
 		height: getHeightOfTheImage(576, 614);
-		transform: translate(-5%, 5%)
+		transform: translate(-5%, 5%);
 	}
 
-	&__card-title--lower{
+	&__card-title--lower {
 		color: #000 !important;
 	}
 }
-
 
 //------------------------------------------------------------------- Category
 
@@ -294,9 +283,9 @@
 		gap: 3rem;
 	}
 
-	&__category-item:nth-child(even){
+	&__category-item:nth-child(even) {
 		flex-direction: row-reverse;
-		@include  breakpoint("laptop", 263){
+		@include breakpoint("laptop", 263) {
 			flex-direction: row;
 		}
 	}
@@ -305,8 +294,8 @@
 		flex: 0 1 61.5rem;
 		height: max-content;
 		@include breakpoint("laptop", 263) {
-				display: none;
-			}
+			display: none;
+		}
 	}
 
 	&__category-img {
@@ -319,7 +308,7 @@
 		@include flex-column;
 		gap: 3.5rem;
 		@include breakpoint("laptop", 263) {
-				flex: 1 1 auto;
+			flex: 1 1 auto;
 		}
 	}
 
@@ -346,8 +335,8 @@
 		@include flex-center;
 	}
 
-	&__title--lower::after{
-		content:"..........................................";
+	&__title--lower::after {
+		content: "..........................................";
 		display: inline-block;
 		margin-left: 1rem;
 	}
@@ -356,7 +345,8 @@
 		flex: 0 1 max-content;
 	}
 
-	&__category-price {}
+	&__category-price {
+	}
 
 	&__category-description {
 		@include flex-column;
@@ -366,15 +356,175 @@
 		content: "";
 		display: block;
 		width: 100%;
-		height: .1rem;
-		background-color: #9BB7BF;
+		height: 0.1rem;
+		background-color: #9bb7bf;
 	}
 }
 
-
 .button-category {
 	width: 100%;
-	a{
+	a {
 		font-size: 1.6rem;
+	}
+}
+
+//------------------------------------------------------------------- Discount
+
+.main {
+	&__form {
+		background-color: #edf5f7;
+	}
+	&__form-container {
+		@include flex-base;
+		width: 100%;
+		gap: resize(115, 60);
+		@include breakpoint("tablet", 230) {
+			@include flex-column-align-start;
+			gap: 4rem;
+		}
+	}
+
+	&__form-item {
+		flex: 1 auto;
+		height: 66.7rem;
+		width: 45%;
+		@include breakpoint("tablet", 230) {
+			flex: 1;
+			width: 100%;
+		}
+	}
+
+	&__form-discount {
+		width: 100%;
+		@include flex-base;
+		height: 19.4rem;
+		justify-content: flex-start;
+	}
+
+	&__discount-left {
+		height: inherit;
+		width: 60%;
+		padding: 2.2rem 4.4rem;
+		background-color: #fff;
+		@include flex-column;
+		gap: 1.8rem;
+	}
+
+	&__discount-block {
+		@include flex-base;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: row-reverse;
+		gap: resize(18, 13);
+	}
+
+	&__discount-link {
+		@include flex-column;
+		text-transform: capitalize;
+		font-weight: 800;
+	}
+
+	&__discount-description {
+		font-weight: 400;
+	}
+
+	&__discount-right {
+		height: inherit;
+		padding: 1.2rem 3.4rem;
+		width: 40%;
+		background-color: #1e2c30;
+		@include flex-column-center;
+	}
+
+	&__discount-title {
+		font-size: 2.4rem;
+		@include flex-column;
+		text-align: center;
+		color: #fff;
+
+		span {
+			@include flex-base;
+			gap: 0.5rem;
+		}
+
+		span::before,
+		span::after {
+			content: "-";
+		}
+	}
+
+	&__discount-amount {
+		color: #fff;
+	}
+
+	&__discount-number {
+		color: #fff;
+		font-size: 4rem;
+	}
+
+	&__form-box {
+		@include flex-column;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		background-color: #fff;
+		padding: 6.6rem 7.5rem;
+		box-shadow: 0 0 2rem #555;
+		@include breakpoint("tablet", 230) {
+			box-shadow: none;
+		}
+	}
+
+	&__form-block {
+		width: 100%;
+		height: 6.5rem;
+		background-color: #fff;
+		position: relative;
+		top: 0;
+		left: 0;
+		border: 0.1rem solid #5c8692;
+
+		label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 6.5rem;
+			height: 6.5rem;
+			@include flex-center;
+			font-size: 2.4rem;
+		}
+		textarea {
+			width: 100%;
+			height: 100%;
+			padding-left: 6.5rem;
+			resize: none;
+			padding-top: 2.3rem;
+			font-size: 1.8rem;
+		}
+
+		select {
+			width: 100%;
+			height: inherit;
+			padding-left: 6.5rem;
+		}
+	}
+
+	&__form-block:nth-child(5) {
+		height: 13.6rem;
+		resize: none;
+	}
+
+	&__form-input {
+		width: 100%;
+		height: inherit;
+		padding-left: 7rem;
+		font-size: 1.8rem;
+		display: inline-block;
+	}
+
+	&__form-button {
+	}
+
+	&__form-input {
 	}
 }

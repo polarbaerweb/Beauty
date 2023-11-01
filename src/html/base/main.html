@@ -666,10 +666,10 @@
 			</div>
 		</div>
 	</section>
-	<div class="main__form main__section">
+	<section class="main__form main__section">
 		<div class="main__container">
 			<div class="main__form-container">
-				<div class="main__left-block">
+				<div class="main__left-block main__form-item">
 					<div class="main__left-top">
 						<h3 class="main__icon-title">flat discount</h3>
 						<h2 class="main__title">Claim upto&nbsp;50% offer on&nbsp;the most popular services...</h2>
@@ -680,27 +680,73 @@
 							</p>
 						</div>
 					</div>
-					<div class="main__left-bottom">
-						<div class="main__form-discount">
-							<div class="main__discount-left">
-								<div class="main__discount-block">
-									<a href="mailto:info@beautyness.com" class="main__discount-link main__description" target="_blank">
-										mail us : <span class="main__discount-description">info@beautyness.com</span>
-									</a>
-								</div>
-								<div class="main__discount-block">
-									<a href="tel:+221234568009" class="main__discount-link main__description" target="_blank">
-										mail us : <span class="main__discount-description">info@beautyness.com</span>
-									</a>
-								</div>
+					<div class="main__form-discount">
+						<div class="main__discount-left">
+							<div class="main__discount-block">
+								<a href="mailto:info@beautyness.com" class="main__discount-link main__description" target="_blank">
+									<span>mail us :</span><span class="main__discount-description">info@beautyness.com</span>
+								</a>
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="46" viewBox="0 0 30 46" fill="none">
+									<circle cx="27" cy="11.5" r="3" fill="#5C8692" />
+									<circle cx="15" cy="11.5" r="3" fill="#5C8692" />
+									<circle cx="3" cy="11.5" r="3" fill="#5C8692" />
+								</svg>
+							</div>
+							<div class="main__discount-block">
+								<a href="tel:+221234568009" class="main__discount-link main__description" target="_blank">
+									<span>mail us :</span> <span class="main__discount-description">info@beautyness.com</span>
+								</a>
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="46" viewBox="0 0 30 46" fill="none">
+									<circle cx="27" cy="11.5" r="3" fill="#5C8692" />
+									<circle cx="15" cy="11.5" r="3" fill="#5C8692" />
+									<circle cx="3" cy="11.5" r="3" fill="#5C8692" />
+								</svg>
+							</div>
+						</div>
+						<div class="main__discount-right">
+							<div class="main__discount-titles">
+								<h3 class="main__title main__discount-title">
+									<span class="main__discount-title--stylized">get flat</span> Discount
+								</h3>
+							</div>
+							<div class="main__discount-amount">
+								<p class="main__description main__discount-number">
+									50%
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="main__right-block">
-						
-					</div>
+				</div>
+				<div class="main__right-block main__form-item">
+					<form action="#" method="post" class="main__form-box">
+						<div class="main__form-block">
+							<label for="name" class="_icon-user"></label>
+							<input type="text" name="username" id="name" class="main__form-input" autocomplete="off" required>
+						</div>
+						<div class="main__form-block">
+							<label for="email" class="_icon-mail"></label>
+							<input type="email" name="email" id="email" class="main__form-input" autocomplete="off" inputmode="email" required>
+						</div>
+						<div class="main__form-block">
+							<label for="phone" class="_icon-phone"></label>
+							<input type="text" class="mail__form-input" name="phone"  inputmode="numeric" required>
+						</div>
+						<div class="main__form-block">
+							<label for="service" class="_icon-book_open "></label>
+							<select name="service" id="service" required class="mail__form-input">
+								<option value="cut-hair">Cut hair</option>
+								<option value="cut-hair">mask</option>
+								<option value="cut-hair">hair style</option>
+							</select>
+						</div>
+						<div class="main__form-block">
+							<label for="note" class="_icon-edit"></label>
+							<textarea name="note" id="note" class="_icon-edit"></textarea>
+						</div>
+						<button type="submit" class="navigation-button button main__form-button">Send message</button>
+					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </main>
